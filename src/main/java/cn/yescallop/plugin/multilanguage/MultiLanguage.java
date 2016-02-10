@@ -3,6 +3,7 @@ package cn.yescallop.plugin.multilanguage;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.EventHandler;
+import cn.nukkit.event.EventPriority;
 import cn.nukkit.event.player.PlayerJoinEvent;
 import cn.nukkit.Player;
 import cn.nukkit.utils.Utils;
@@ -34,7 +35,7 @@ public class MultiLanguage extends PluginBase implements Listener{
         database = new File(this.getDataFolder(), "GeoLite2-Country.mmdb");
     }
     
-    @EventHandler(priority = EventPriority.MONITOR);
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         Locale locale = new LanguageCode().fromIp(player.getAddress());
