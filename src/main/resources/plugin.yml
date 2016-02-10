@@ -1,0 +1,6 @@
+name: MultiLanguage
+version: "1.0"
+api: ["1.0.0"]
+author: Scallop
+description: Multi-language
+main: cn.yescallop.plugin.multilanguage.MultiLanguage
